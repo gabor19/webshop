@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    display: grid;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "s s as"
+                         "f f f";
+    grid-template-columns: 1fr 3fr;
+    margin: auto;
+    width: 80%;
+    background-color: grey;
+}
+
+header{
+    grid-area: h;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+nav{
+    grid-area: n;
+}
+nav ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+}
+nav ul li a:hover{
+    color:orange;
+
+}
+section{
+    grid-area: s;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: 20px;
+}
+section div{
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color:hsla(30, 100%, 70%,0.5 );
+    color: white;
+    padding: 10px;
+}
+.gombok{
+    border: none;
+}
+.nemtudom{
+    float: right;
+}
+aside{
+    background-color: hsla(30, 100%, 70%,0.5 );
+    grid-area: as;
+    margin:20px;
+    padding: 10px; 
+}
+aside div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid black;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+aside button{
+    margin-top: 200%;
+}
+h1{
+    margin: 0;
+}
+aside h2{
+    text-align: center;
+    margin:0;
+}
+.jobb{
+    text-align: right;
+    padding-left: 50%;
+}
+footer{
+    grid-area: f;
+}
+footer h2{
+    text-align: center;
+    color: white;
+}
+img{
+    width: 100%;
+}
+@media screen and (max-width:700px){
+    section{
+        grid-template-columns: 1fr 1fr;
+        
+}}
+@media screen and (max-width:450px){
+    section{
+        grid-template-columns: 1fr;       
+    }
+    main{
+        font-size: 15px;
+        grid-template-areas: "h "
+                            "as"
+                            "n "
+                             "s "
+                            "f ";
+    }
+}
